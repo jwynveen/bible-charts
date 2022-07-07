@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Genesis Timeline</title>
+  <style>
+    ul, li {
+      display: block;
+      margin: 0;
+      padding: 0;
+      position: relative;
+    }
+
+    div.life {
+      height: 1.5rem;
+      background-color: #eee;
+      width: 1.2em;
+      background-image: linear-gradient(#ccc, #eee);
+    }
+    span.name {
+      font-size: 1rem;
+      line-height: 1rem;
+      position: absolute;
+      top: 0.25rem;
+      left: 0.5rem;
+    }
+
+    li.event {
+      position: absolute;
+      height: 100%;
+      width: 2px;
+      background-color: darkgray;
+      top: 0;
+      z-index: -1;
+    }
+    .event .name { writing-mode: vertical-lr; }
+  </style>
+</head>
+<body>
+<script>
+  function zoom(amount) {
+    var root = document.getElementById('root');
+    var fontSize = parseInt(root.style.fontSize.replace('px', ''));
+    root.style.fontSize = (fontSize + amount) + 'px';
+  }
+</script>
+<div class="controls">
+  <button onclick="zoom(5)">Zoom In</button>
+  <button onclick="zoom(-5)">Zoom Out</button>
+</div>
+<ul id="root" style="font-size: 30px">
+  <li>
+    <div class="life" style="width:9.3em;"><span class="name">Adam</span></div>
+    <ul>
+      <li style="left:1.3em">
+        <div class="life" style="width:9.12em;"><span class="name">Seth</span></div>
+        <ul><li style="left:1.05em">
+          <div class="life" style="width:9.05em;"><span class="name">Enosh</span></div>
+          <ul><li style="left:.9em">
+            <div class="life" style="width:9.10em;"><span class="name">Kenan</span></div>
+            <ul><li style="left:.7em">
+              <div class="life" style="width:8.95em;"><span class="name">Mahalalel</span></div>
+              <ul><li style="left:.65em">
+                <div class="life" style="width:9.62em;"><span class="name">Jared</span></div>
+                <ul><li style="left:1.62em">
+                  <div class="life" style="width:3.65em;"><span class="name">Enoch</span></div>
+                  <ul><li style="left:.65em">
+                    <div class="life" style="width:9.69em;"><span class="name">Methuselah</span></div>
+                    <ul><li style="left:1.87em">
+                      <div class="life" style="width:7.77em;"><span class="name">Lamech</span></div>
+                      <ul><li style="left:1.82em">
+                        <div class="life" style="width:9.5em;"><span class="name">Noah</span></div>
+                        <ul><li style="left:5.02em">
+                          <div class="life" style="width:6em;"><span class="name">Shem</span></div>
+                          <ul><li style="left:1em">
+                            <div class="life" style="width:4.38em;"><span class="name">Arpachshad</span></div>
+                            <ul><li style="left:.35em">
+                              <div class="life" style="width:4.33em;"><span class="name">Shelah</span></div>
+                              <ul><li style="left:.3em">
+                                <div class="life" style="width:4.64em;"><span class="name">Eber</span></div>
+                                <ul><li style="left:.34em">
+                                  <div class="life" style="width:2.39em;"><span class="name">Peleg</span></div>
+                                  <ul><li style="left:.3em">
+                                    <div class="life" style="width:2.39em;"><span class="name">Reu</span></div>
+                                    <ul><li style="left:.32em">
+                                      <div class="life" style="width:2.3em;"><span class="name">Serug</span></div>
+                                      <ul><li style="left:.3em">
+                                        <div class="life" style="width:1.48em;"><span class="name">Nahor</span></div>
+                                        <ul><li style="left:.29em">
+                                          <div class="life" style="width:2.05em;"><span class="name">Terah</span></div>
+                                          <ul><li style="left:.7em">
+                                            <div class="life" style="width:1.75em;"><span class="name">Abram/Abraham</span></div>
+                                            <ul>
+                                              <li style="left:.86em">
+                                                <div class="life" style="width:1.37em;"><span class="name">Ishmael</span></div>
+                                              </li>
+                                              <li style="left:1em">
+                                                <div class="life" style="width:1.8em;"><span class="name">Isaac</span></div>
+                                                <ul>
+                                                  <li style="left:.6em"><div class="life"><span class="name">Esau</span></div></li>
+                                                  <li style="left:.6em"><div class="life"><span class="name">Jacob</span></div></li>
+                                                </ul>
+                                              </li>
+                                            </ul>
+                                          </li></ul>
+                                        </li></ul>
+                                      </li></ul>
+                                    </li></ul>
+                                  </li></ul>
+                                </li></ul>
+                              </li></ul>
+                            </li></ul>
+                          </li></ul>
+                        </li></ul>
+                      </li></ul>
+                    </li></ul>
+                  </li></ul>
+                </li></ul>
+              </li></ul>
+            </li></ul>
+          </li></ul>
+          </li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+  <li class="event" style="left: 16.56em">
+    <span class="name">Flood</span>
+  </li>
+</ul>
+</body>
+</html>
